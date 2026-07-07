@@ -1,6 +1,6 @@
 🧬** PyMutScan — DNA Mutation Detection & Variant Analysis Platform.
 
-🔗 Live App: pymutscane.streamlit.app
+🔗 Live App:https://pymutscane-amd.streamlit.app/
 
 A Streamlit-based platform for detecting and interpreting genetic variants from patient-derived DNA sequences. PyMutScan performs pairwise sequence alignment against a reference gene, calls SNPs, translates affected codons, classifies variant impact, and maintains persistent patient-level records — packaged as a single interactive application.
 
