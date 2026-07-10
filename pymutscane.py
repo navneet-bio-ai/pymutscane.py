@@ -643,7 +643,7 @@ if run:
         st.subheader(f"Detected Variants — {gene}")
         if mutations:
             df = pd.DataFrame(mutations)
-          st.dataframe(df.style.map(color_clinical, subset=["Clinical"]), width="stretch")
+            st.dataframe(df.style.map(color_clinical, subset=["Clinical"]), width="stretch")       
             st.download_button("⬇️ Download Results as CSV", data=df.to_csv(index=False), file_name=f"PyMutScan_{gene}_results.csv", mime="text/csv")
         else:
             st.info("No mutations detected — sequences are identical.")
@@ -959,8 +959,8 @@ with pr_tab2:
                         try:
                             muts = json.loads(last["mutations_json"])
                             if muts:
-                                st.dataframe(pd.DataFrame(muts).style.applymap(
-                                    color_clinical, subset=["Clinical"]), use_container_width=True)
+                             st.dataframe(pd.DataFrame(muts).style.map(
+                                    color_clinical, subset=["Clinical"]), width="stretch")  
                             else:
                                 st.info("No mutations in this analysis.")
                         except Exception:
