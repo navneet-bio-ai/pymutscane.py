@@ -643,7 +643,7 @@ if run:
         st.subheader(f"Detected Variants — {gene}")
         if mutations:
             df = pd.DataFrame(mutations)
-            st.dataframe(df.style.applymap(color_clinical, subset=["Clinical"]), use_container_width=True)
+          st.dataframe(df.style.map(color_clinical, subset=["Clinical"]), width="stretch")
             st.download_button("⬇️ Download Results as CSV", data=df.to_csv(index=False), file_name=f"PyMutScan_{gene}_results.csv", mime="text/csv")
         else:
             st.info("No mutations detected — sequences are identical.")
